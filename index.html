@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5 - Capstone Project & Optimization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">ApexPlanet Capstone</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#catalog">Product Catalog</a></li>
+                <li><a href="#cart">Shopping Cart (<span id="cartCount">0</span>)</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- Banner / Intro -->
+        <section class="hero-banner">
+            <h1>Web Development Capstone Application</h1>
+            <p>An optimized, cross-browser web app built with HTML5, CSS3, and modern JavaScript ES6.</p>
+        </section>
+
+        <!-- Product Catalog Section -->
+        <section id="catalog" class="section">
+            <h2>Featured Catalog</h2>
+            
+            <div class="controls-bar">
+                <div class="control-item">
+                    <label for="categoryFilter">Category:</label>
+                    <select id="categoryFilter">
+                        <option value="all">All Items</option>
+                        <option value="tech">Technology</option>
+                        <option value="apparel">Apparel</option>
+                    </select>
+                </div>
+                <div class="control-item">
+                    <label for="searchInput">Search:</label>
+                    <input type="text" id="searchInput" placeholder="Search products...">
+                </div>
+            </div>
+
+            <div id="productGrid" class="product-grid"></div>
+        </section>
+
+        <!-- Interactive Cart Section (Persistent Storage) -->
+        <section id="cart" class="section">
+            <h2>Your Saved Cart Items</h2>
+            <div id="cartItemsContainer" class="cart-container">
+                <p id="emptyCartMsg">Your cart is currently empty.</p>
+            </div>
+            <div class="cart-summary">
+                <h3>Total: $<span id="cartTotal">0.00</span></h3>
+                <button id="clearCartBtn" class="action-btn danger">Clear Cart</button>
+            </div>
+        </section>
+
+        <!-- Optimized Contact Form -->
+        <section id="contact" class="section">
+            <h2>Contact & Feedback</h2>
+            <form id="capstoneForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required placeholder="Enter your name">
+                    <small class="error-msg" id="nameError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                    <small class="error-msg" id="emailError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" required placeholder="Your message..."></textarea>
+                    <small class="error-msg" id="messageError"></small>
+                </div>
+                <button type="submit" class="action-btn">Submit Inquiry</button>
+                <p id="formStatus" class="status-msg"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
